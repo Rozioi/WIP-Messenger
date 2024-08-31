@@ -1,0 +1,68 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Обеспечивает, что модальное окно поверх всего остального контента */
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.modal-content img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px; /* Фиксированная ширина кнопки */
+    height: 30px; /* Фиксированная высота кнопки */
+    background: #333; /* Темно-серый фон */
+    border: none;
+    border-radius: 50%; /* Округлая форма кнопки */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* Белый цвет текста */
+    display: flex;
+    align-items: center; /* Центрирование содержимого по вертикали */
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Добавление тени для выделения */
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+
+/* Эффект при наведении */
+.close-button:hover {
+    background: #555; /* Светло-серый фон при наведении */
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .close-button {
+        width: 25px; /* Меньше ширина на мобильных устройствах */
+        height: 25px; /* Меньше высота на мобильных устройствах */
+        font-size: 14px; /* Меньше размер шрифта на мобильных устройствах */
+    }
+
+    .modal-content {
+        max-width: 95vw; /* Увеличенная максимальная ширина на мобильных устройствах */
+        max-height: 95vh; /* Увеличенная максимальная высота на мобильных устройствах */
+    }
+
+    .modal-content img {
+        max-width: 95vw;
+        max-height: 95vh;
+    }
+}

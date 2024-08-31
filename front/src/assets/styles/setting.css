@@ -1,0 +1,100 @@
+/* src/assets/styles/setting.css */
+
+/* Основные стили */
+.setting-container {
+    background-color: #1e1e1e; /* Темный фон для страницы настроек */
+    color: #f0f0f0; /* Светлый цвет текста для читаемости */
+    padding: 20px;
+    border-radius: 12px; /* Слегка увеличенный радиус для более гладкого вида */
+    max-width: 1200px; /* Опционально: максимальная ширина контейнера */
+    margin: 20px auto; /* Центрирование контейнера и добавление вертикального отступа */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавление тени для глубины */
+}
+
+.setting-profile-header {
+    background-size: cover; /* Обеспечивает, чтобы фон полностью покрывал заголовок */
+    background-position: center;
+    height: 200px; /* Фиксированная высота для заголовка профиля */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 12px; /* Закругленные углы */
+    overflow: hidden; /* Скрытие переполнения для аккуратного вида */
+    margin-bottom: 20px; /* Расстояние ниже заголовка */
+}
+
+.setting-profile-picture-container {
+    border: 4px solid #ffffff; /* Светлая рамка для контраста */
+    border-radius: 50%; /* Круглый контейнер */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Более выраженная тень для контейнера */
+    background: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для улучшения контраста изображения */
+    padding: 5px; /* Пространство между рамкой и картинкой */
+    display: flex;
+    align-items: center; /* Центрирование картинки по вертикали */
+    justify-content: center; /* Центрирование картинки по горизонтали */
+    width: 120px; /* Ширина контейнера для профиля */
+    height: 120px; /* Высота контейнера для профиля */
+}
+
+.setting-profile-picture {
+    width: 100%; /* Заполняет контейнер */
+    height: 100%; /* Заполняет контейнер */
+    border-radius: 50%; /* Круглая картинка профиля */
+    object-fit: cover; /* Обеспечивает, чтобы изображение заполняло контейнер */
+}
+
+.setting-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование опций по горизонтали */
+}
+
+.setting-options a {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a; /* Темный фон для ссылок */
+    color: #e0e0e0; /* Светлый цвет текста для читаемости */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px; /* Закругленные углы для ссылок */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* Плавные переходы эффектов */
+    width: 100%; /* Полная ширина контейнера */
+    max-width: 400px; /* Ограничение ширины ссылок */
+    box-sizing: border-box; /* Включение отступов и границ в общую ширину и высоту элемента */
+}
+
+.setting-options a svg {
+    margin-right: 12px; /* Пространство между иконкой и текстом */
+    color: #e0e0e0; /* Обеспечивает консистентный цвет иконок */
+}
+
+.setting-options a:hover {
+    background-color: #333; /* Более светлый фон при наведении */
+    color: #ffffff; /* Цвет текста при наведении */
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+    .setting-container {
+        padding: 15px; /* Уменьшение отступов для мобильных устройств */
+        margin: 10px; /* Уменьшение вертикального отступа */
+    }
+
+    .setting-profile-header {
+        height: 150px; /* Уменьшение высоты заголовка для мобильных устройств */
+    }
+
+    .setting-profile-picture-container {
+        width: 100px; /* Уменьшение ширины контейнера для профиля */
+        height: 100px; /* Уменьшение высоты контейнера для профиля */
+    }
+
+    .setting-options a {
+        padding: 10px; /* Уменьшение отступов внутри ссылок */
+        margin: 8px 0; /* Уменьшение вертикального отступа между ссылками */
+        max-width: 90%; /* Увеличение ширины ссылок до 90% от ширины контейнера */
+    }
+}

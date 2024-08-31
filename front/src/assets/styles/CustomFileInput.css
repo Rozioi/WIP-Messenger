@@ -1,0 +1,86 @@
+/* Общий стиль для кастомного элемента загрузки файла */
+.custom-file-input {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column; /* Располагаем элементы вертикально на мобильных устройствах */
+    padding: 10px; /* Добавляем немного отступа */
+}
+
+/* Стили для метки загрузки файла */
+.file-upload-label {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 2px dashed #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%; /* Полная ширина на мобильных устройствах */
+    max-width: 300px; /* Максимальная ширина для больших экранов */
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* Учитываем padding в ширине элемента */
+}
+
+/* Эффект при наведении на метку */
+.file-upload-label:hover {
+    background-color: #f0f0f0;
+}
+
+/* Иконка загрузки (если есть) */
+.upload-icon {
+    margin-right: 8px;
+}
+
+/* Скрытие стандартного input */
+.file-upload-input {
+    display: none; /* Скрыть стандартный input */
+}
+
+/* Стили для блока прогресса загрузки */
+.upload-progress {
+    margin-top: 10px;
+    width: 100%; /* Полная ширина на мобильных устройствах */
+    max-width: 300px; /* Максимальная ширина для больших экранов */
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+/* Стили для полосы прогресса */
+.upload-progress .progress-bar {
+    height: 100%;
+    background-color: #4caf50; /* Зеленый цвет для полосы прогресса */
+    transition: width 0.4s ease; /* Плавный переход ширины полосы */
+}
+
+/* Стили для текста с процентом */
+.upload-progress span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px; /* Размер шрифта для мобильных устройств */
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .file-upload-label {
+        font-size: 12px; /* Уменьшение размера шрифта для мобильных устройств */
+        padding: 8px; /* Меньше отступы для мобильных устройств */
+    }
+
+    .upload-progress {
+        height: 15px; /* Уменьшение высоты полосы прогресса */
+    }
+
+    .upload-progress span {
+        font-size: 10px; /* Уменьшение размера шрифта для текста с процентом */
+    }
+}

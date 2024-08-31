@@ -1,0 +1,107 @@
+/* Container for the list of stories */
+.stories-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #1c1c1c; /* Dark background for contrast */
+}
+
+/* Individual story card */
+.story-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+    overflow: hidden;
+    width: 300px; /* Fixed width for story card */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s; /* Added transition for shadow */
+}
+
+/* Hover effect for the story card */
+.story-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Container for the story image */
+.image-container {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Background color in case image doesn't fill the container */
+}
+
+/* Story image styling */
+.story-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+/* Container for story content */
+.story-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+/* Title of the story */
+.story-title {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Description of the story */
+.story-description {
+    font-size: 14px;
+    margin: 0;
+    color: #666;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .stories-list {
+        flex-direction: column;
+        align-items: center; /* Center align items on mobile */
+    }
+
+    .story-card {
+        width: 90%; /* Full width with some margin on mobile */
+        max-width: 500px; /* Maximum width for larger screens */
+        margin-bottom: 15px;
+    }
+
+    .image-container {
+        height: 150px; /* Smaller height on mobile */
+    }
+
+    .story-title {
+        font-size: 16px;
+    }
+
+    .story-description {
+        font-size: 12px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .story-title {
+        font-size: 14px;
+    }
+
+    .story-description {
+        font-size: 10px;
+    }
+}

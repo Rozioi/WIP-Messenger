@@ -1,0 +1,43 @@
+/* Основные стили для десктопных устройств */
+.layout-container {
+    display: flex;
+    height: 100vh; /* Высота контейнера на всю высоту экрана */
+    width: 100vw;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start; /* Выравнивание по вертикали к началу (верх) */
+    justify-content: flex-start; /* Выравнивание по горизонтали к началу (лево) */
+    max-width: 250px; /* Ширина для header (увеличена для десктопа) */
+    height: 100%;
+    background-color: #313131; /* Цвет фона для наглядности */
+    padding: 10px; /* Внутренние отступы */
+    box-sizing: border-box; /* Включает отступы и границы в расчет ширины и высоты */
+}
+
+.main-content {
+    flex-grow: 1; /* Занимает оставшееся пространство */
+    background-color: #1e1e1e; /* Цвет фона для наглядности */
+    margin-left: 1px; /* Разделение между header и content */
+    overflow: auto; /* Вертикальная прокрутка, если контент превышает высоту */
+    box-sizing: border-box; /* Включает отступы и границы в расчет ширины и высоты */
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+    .layout-container {
+        flex-direction: column; /* Смена направления флексов для мобильных устройств */
+        width: 100vw;
+    }
+
+    .header {
+        max-width: 100%; /* Ширина для header на мобильных устройствах */
+        height: auto; /* Автоматическая высота для заголовка */
+    }
+
+    .main-content {
+        margin-left: 0; /* Убираем разделение между header и content */
+        overflow: auto; /* Позволяет вертикальную прокрутку при необходимости */
+    }
+}

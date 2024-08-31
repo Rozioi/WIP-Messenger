@@ -1,0 +1,138 @@
+/* src/assets/styles/editProfile.css */
+
+/* src/assets/styles/editProfile.css */
+
+/* Container for the Edit Profile page */
+
+
+.set-prof-container {
+    background-color: #1e1e1e; /* Dark background for the edit profile page */
+    color: #f0f0f0; /* Light text color */
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners */
+    max-width: 800px; /* Maximum width for the form */
+    height: 100vh;
+    overflow: hidden; /* Hide the scrollbars */
+    margin: 20px auto; /* Center the container and add vertical spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    position: relative; /* Ensure the child elements can be positioned absolutely */
+}
+
+/* Wrapper to allow for scrolling */
+.set-prof-scroll-wrapper {
+    height: 100%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 15px; /* Space for scrollbar if needed */
+}
+
+/* Hide scrollbars for Webkit browsers (Chrome, Safari) */
+.set-prof-scroll-wrapper::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Optional: Background color */
+}
+
+/* Hide scrollbars for Firefox */
+.set-prof-scroll-wrapper {
+    scrollbar-width: none; /* For Firefox */
+}
+
+/* Hide scrollbars for IE and Edge */
+.set-prof-scroll-wrapper {
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+
+.set-prof-form {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.set-prof-field {
+
+    margin-bottom: 15px; /* Space between fields */
+}
+
+.set-prof-field label {
+    display: block;
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold;
+}
+
+.set-prof-field input,
+.set-prof-field textarea {
+    width: 100%; /* Full width of the container */
+    padding: 10px;
+    border: 1px solid #333; /* Dark border for the input fields */
+    border-radius: 8px; /* Rounded corners for input fields */
+    background-color: #2a2a2a; /* Dark background for input fields */
+    color: #f0f0f0; /* Light text color */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.set-prof-field textarea {
+    resize: vertical; /* Allow vertical resizing for the textarea */
+    min-height: 100px; /* Minimum height for the textarea */
+}
+
+.set-prof-submit {
+    background-color: #007bff; /* Primary button color */
+    color: #ffffff; /* Button text color */
+    padding: 15px;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.set-prof-submit:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+/* Profile Preview Styles */
+.set-prof-preview {
+    margin-top: 30px; /* Space above the preview section */
+    border: 1px solid #333; /* Border around the preview */
+    border-radius: 12px; /* Rounded corners for the preview */
+    padding: 20px;
+    background-color: #2a2a2a; /* Dark background for the preview */
+}
+
+.set-prof-preview h2 {
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.set-prof-preview-banner {
+    background-size: cover;
+    background-position: center;
+    height: 150px; /* Fixed height for the banner preview */
+    width: 100%;
+    border-radius: 8px; /* Rounded corners */
+    position: relative; /* For positioning the profile picture */
+    margin-bottom: 15px; /* Space below the banner */
+}
+
+.set-prof-preview-picture {
+    position: absolute;
+    bottom: -60px; /* Position the profile picture below the banner */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px; /* Fixed size for the profile picture preview */
+    height: 120px; /* Fixed size for the profile picture preview */
+    border-radius: 50%; /* Circular profile picture */
+    border: 5px solid #fff; /* White border around the picture */
+    object-fit: cover; /* Ensure the image covers the element */
+}
+
+.set-prof-preview-info {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.set-prof-preview-info p {
+    margin: 5px 0; /* Space between lines of text */
+}

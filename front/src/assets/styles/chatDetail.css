@@ -1,0 +1,220 @@
+/* Контейнер для деталей чата */
+.chat-detail-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #3D3D3D;
+    height: 100vh;
+    width: 100%;
+    position: relative; /* Для размещения элементов */
+}
+
+/* Информация о текущем чате */
+.chat-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    background-color: #313131;
+    position: relative;
+}
+
+/* Изображение в информации о чате */
+.chat-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+/* Текст в информации о чате */
+.chat-info p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+/* Иконка в информации о чате */
+.chat-info-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 24px;
+    margin-right: 15px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Эффект при наведении на иконку в информации о чате */
+.chat-info-icon:hover {
+    color: #000;
+}
+
+/* Список сообщений */
+.messages-list {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #3D3D3D;
+    /* Важно: Убедитесь, что элементы внутри scrollable area имеют корректные размеры */
+}
+
+/* Элемент сообщения */
+.message-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Форма нового сообщения */
+.new-message-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #313131;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Поле ввода для нового сообщения */
+.new-message-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Кнопка отправки нового сообщения */
+.new-message-form button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Контейнер меню чата */
+.chat-menu {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    z-index: 1000;
+    display: none;
+}
+
+/* Показ меню чата */
+.chat-menu.show {
+    display: block;
+}
+
+/* Кнопка в меню чата */
+.chat-menu button {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Эффект при наведении на кнопку меню чата */
+.chat-menu button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Разделитель в меню чата */
+.chat-menu hr {
+    margin: 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .chat-list-container {
+        flex-direction: column;
+    }
+
+    .chat-container-full,
+    .chat-outlet {
+        width: 100%;
+    }
+
+    .chat-container-full {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+    .chat-info{
+        margin-top: 50px;
+    }
+
+    .chat-item-img,
+    .chat-info img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chat-item-title,
+    .chat-info p {
+        font-size: 14px;
+    }
+
+    .new-message-form {
+        padding: 5px; /* Меньше отступы для мобильных устройств */
+    }
+
+    .new-message-form input {
+        font-size: 14px;
+    }
+
+    .new-message-form button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .search-div input {
+        height: 30px;
+    }
+
+    .search-results {
+        width: 100%;
+        max-width: none;
+        top: 50px;
+    }
+
+    .result-item-title {
+        font-size: 14px;
+    }
+
+    .result-item-username {
+        font-size: 10px;
+    }
+
+    /* Убедитесь, что список сообщений правильно масштабируется на мобильных устройствах */
+    .messages-list {
+        padding: 10px;
+    }
+
+    /* Дополнительная корректировка высоты messages-list, если это необходимо */
+    .messages-list {
+        max-height: calc(100vh - 200px); /* Замените значение на нужную высоту, если необходимо */
+    }
+}

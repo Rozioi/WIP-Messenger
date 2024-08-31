@@ -1,0 +1,12 @@
+#root{
+    overflow-y: hidden;
+    width: 100vw;
+    background-color: #313131;
+}
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+    #root {
+        flex-direction: column; /* Смена направления флексов для мобильных устройств */
+        width: 100vw;
+    }
+}

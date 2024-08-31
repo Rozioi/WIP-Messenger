@@ -1,0 +1,7 @@
+{
+  "welcome": "Welcome",
+  "description": "This is a localized React app.",
+  "main": {
+    "welcomingtext": "Choose who you would like to write to"
+  }
+}

@@ -1,0 +1,237 @@
+/* Основной контейнер для списка чатов и контейнера чатов */
+.chat-list-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /* Убираем скролл в контейнере, чтобы он был только в чатах */
+}
+
+/* Контейнер со списком чатов */
+.chat-container-full {
+    width: 35%;
+    background-color: #3D3C3C;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Список чатов */
+.chat-list {
+    background-color: #3D3C3C;
+    overflow-y: auto;
+    flex: 1; /* Растягиваем список на всю доступную высоту */
+}
+
+/* Контейнер для текущего чата */
+.chat-outlet {
+    width: 65%;
+    background-color: #3D3D3D;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Элементы списка чатов */
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #1572B6;
+    background-color: #313131;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    transition: opacity 0.4s;
+}
+
+/* Эффект при наведении на элемент чата */
+.chat-item:hover {
+    opacity: 1;
+}
+
+/* Изображение элемента чата */
+.chat-item-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Заголовок элемента чата */
+.chat-item-title {
+    font-size: 16px;
+}
+
+/* Активный элемент чата */
+.chat-item.active {
+    opacity: 1;
+}
+/* Индикатор статуса */
+.status-indicator {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: red; /* Цвет для неактивного состояния */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); /* Добавление тени для выделения */
+    transition: background-color 0.3s ease; /* Плавный переход при изменении статуса */
+}
+
+/* Индикатор активного состояния */
+.status-indicator.active {
+    background-color: green; /* Цвет для активного состояния */
+}
+
+/* Контейнер результатов поиска */
+.search-results {
+    position: absolute;
+    top: 60px; /* Отрегулируйте в зависимости от позиции поискового поля */
+    width: 100%;
+    max-width: 300px; /* Максимальная ширина для больших экранов */
+    background: #fff;
+    border: 1px solid #ddd;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Более мягкая тень */
+    border-radius: 8px; /* Закругленные углы */
+    overflow: hidden; /* Скрыть элементы, выходящие за пределы контейнера */
+}
+
+/* Элемент результата поиска */
+.search-result-item {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee; /* Легкий разделитель */
+    cursor: pointer;
+    transition: background 0.3s ease; /* Плавный переход фона при наведении */
+}
+
+/* Эффект при наведении на элемент результата поиска */
+.search-result-item:hover {
+    background: #f7f7f7; /* Более мягкий серый фон */
+}
+
+/* Изображение элемента результата поиска */
+.result-item-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover; /* Обеспечивает сохранение пропорций изображения */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Небольшая тень для выделения */
+}
+
+/* Контейнер информации о результате поиска */
+.result-info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Заголовок элемента результата поиска */
+.result-item-title {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #333;
+}
+
+/* Имя пользователя в элементе результата поиска */
+.result-item-username {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-size: 13px;
+    color: #888;
+}
+
+/* Контейнер для поискового поля */
+.search-div {
+    border-radius: 20px;
+    margin: 10px;
+    height: fit-content;
+    width: calc(100% - 20px); /* Учитываем отступы */
+    background-color: #444; /* Более темный фон */
+    padding: 5px 15px; /* Более широкие отступы для более привлекательного вида */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для эффекта поднятия */
+}
+
+/* Поле ввода для поиска */
+.search-div input {
+    border-radius: 20px;
+    width: 100%;
+    height: 35px;
+    color: #E2E2E2;
+    outline: none;
+    background-color: #444; /* Цвет соответствует контейнеру */
+    border: none;
+    padding: 5px 15px; /* Добавляем больше пространства для текста */
+    font-size: 14px; /* Увеличен размер шрифта */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход */
+}
+
+/* Эффект фокуса на поле ввода */
+.search-div input:focus {
+    background-color: #555; /* Слегка измененный цвет при фокусе */
+    color: #fff; /* Белый цвет текста при фокусе */
+}
+
+@media (max-width: 768px) {
+    .chat-list-container {
+        flex-direction: column;
+    }
+
+    .chat-container-full,
+    .chat-outlet {
+        width: 100%;
+    }
+
+    .chat-container-full {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .chat-item-img,
+    .chat-info img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chat-item-title,
+    .chat-info p {
+        font-size: 14px;
+    }
+
+    .new-message-form input {
+        font-size: 14px;
+    }
+
+    .new-message-form button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .search-div input {
+        height: 30px;
+    }
+
+    .search-results {
+        width: 100%;
+        max-width: none;
+        top: 50px; /* Обновляем позицию под поисковым полем */
+    }
+
+    .result-item-title {
+        font-size: 14px;
+    }
+
+    .result-item-username {
+        font-size: 10px;
+    }
+}
