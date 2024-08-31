@@ -1,78 +1,84 @@
 
-# WIP-Мессенджер
+---
 
-**WIP-Мессенджер** — это проект мессенджера, находящийся в стадии разработки. Включает фронтенд и бэкенд компоненты, обеспечивающие обмен сообщениями в реальном времени, аутентификацию пользователей, и адаптивный дизайн. Проект создается для обеспечения бесшовного общения с акцентом на удобство и безопасность.
+# WIP-Messenger
 
-## 📋 Основные функции
-- 📧 **Обмен сообщениями в реальном времени:** Общайтесь с друзьями и коллегами через удобный интерфейс.
-- 🔐 **Аутентификация и регистрация:** Создавайте учетные записи и входите в систему с помощью защищенной аутентификации.
-- 🌐 **Адаптивный дизайн:** Приложение оптимизировано для использования на любых устройствах, от мобильных телефонов до настольных ПК.
+**WIP-Messenger** is a work-in-progress messaging project that includes both frontend and backend components. It supports real-time messaging, user authentication, and a responsive design. The project is being developed with a focus on seamless communication, convenience, and security.
 
-## 🚀 Стек технологий
-- **Фронтенд:** React, HTML, CSS, JavaScript
-- **Бэкенд:** Node.js, Express
-- **База данных:** PostgreSQL
-- **Аутентификация:** JWT (JSON Web Tokens)
+## 📋 Key Features
+- 📧 **Real-time Messaging:** Communicate with friends and colleagues through an easy-to-use interface.
+- 🔐 **Authentication and Registration:** Create accounts and log in securely using protected authentication.
+- 🌐 **Responsive Design:** The application is optimized for use on any device, from mobile phones to desktop computers.
 
-## 🛠️ Установка и запуск
+## 🚀 Tech Stack
+- **Frontend:** React, HTML, CSS, JavaScript
+- **Backend:** Node.js, Express
+- **Database:** PostgreSQL
+- **Authentication:** JWT (JSON Web Tokens)
 
-### Требования:
+## 🛠️ Installation and Setup
+
+### Requirements:
 - Node.js
 - npm 
 - PostgreSQL
 
-### Инструкции по установке:
+### Installation Instructions:
 
-1. **Клонируйте репозиторий:**
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/Rozioi/WIP-Messenger.git
    cd WIP-Messenger
    ```
 
-2. **Установка зависимостей для бэкенда:**
+2. **Install backend dependencies:**
    ```bash
    cd back
    npm install
    ```
 
-3. **Настройка переменных окружения:**
-   Создайте файл `.env` в папке `back` и добавьте туда следующие переменные:
+3. **Configure environment variables:**
+   Create a `.env` file in the `back` directory and add the following variables:
    ```
-   JWT_ACCESS_SECRET=ваш_секретный_ключ_для_access_token
-   JWT_REFRESH_SECRET=ваш_секретный_ключ_для_refresh_token
-   ENCRYPTION_KEY=ваш_ключ_шифрования
-   ENCRYPTION_IV=ваш_вектор_инициализации_шифрования
+   JWT_ACCESS_SECRET=your_access_token_secret_key
+   JWT_REFRESH_SECRET=your_refresh_token_secret_key
+   ENCRYPTION_KEY=your_encryption_key
+   ENCRYPTION_IV=your_encryption_iv
    ```
 
-4. **Запуск бэкенда:**
+4. **Start the backend:**
    ```bash
    npm run start
    ```
 
-5. **Установка зависимостей для фронтенда:**
+5. **Install frontend dependencies:**
    ```bash
    cd ../front
    npm install
    ```
 
-6. **Запуск фронтенда:**
+6. **Start the frontend:**
    ```bash
    npm start
    ```
 
-7. **Открытие приложения:**
-   Приложение должно быть доступно по адресу `http://localhost:3000`.
+7. **Open the application:**
+   The application should be accessible at `http://localhost:3000`.
 
-## 🌟 Функционал в разработке
-- 🔔 **Уведомления о новых сообщениях**
-- 🖼️ **Поддержка мультимедийных сообщений**
-- 👥 **Создание групповых чатов**
-- 🎨 **Темизация и пользовательские настройки интерфейса**
+## 🌟 Features in Development
+- 🔔 **New Message Notifications**
+- 🖼️ **Support for Multimedia Messages**
+- 👥 **Group Chat Creation**
+- 🎨 **Theming and User Interface Customization**
 
-## 📝 Вклад в проект
-Ваши идеи и улучшения всегда приветствуются!
-Telegram для связи @Rozioi
+## 📝 Contributing
+Your ideas and contributions are always welcome!  
+Contact via Telegram: [@Rozioi](https://t.me/Rozioi)
+
 ---
 
-Спасибо за интерес к **WIP-Мессенджер**! Следите за обновлениями, чтобы быть в курсе всех нововведений.
+Thank you for your interest in **WIP-Messenger**! Stay tuned for updates to keep track of all new features.
 
+---
+
+*Note: This project is developed by a developer from the Republic of Belarus.*
