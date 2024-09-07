@@ -47,6 +47,7 @@ wss.on('connection', async (ws, req) => {
     // Парсим URL, чтобы извлечь параметры запроса
     const parameters = url.parse(req.url, true).query;
     const userId = parameters.userId;
+    console.log('UserId: ', userId);
 
     if (userId) {
         await pool.query(`UPDATE users SET is_active = TRUE WHERE user_id = $1`, [userId])

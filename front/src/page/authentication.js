@@ -31,7 +31,7 @@ const Authentication = () => {
                         }
                     }, 1000);
                 })
-                .catch(error => setResponseText(error.response.data.message));
+                .catch(error => setResponseText(error.response.message));
         } else {
             api.post('/auth/register', { username, password, firstName, lastName })
                 .then(response => setResponseText(response.data))

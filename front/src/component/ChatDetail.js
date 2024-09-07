@@ -8,7 +8,6 @@ import { BiDotsVerticalRounded } from "react-icons/bi";
 import CustomFileInput from './CustomFileInput';
 import AddUserToGroupModal from "./addUsertoGroupModal";
 
-
 const ChatWindow = () => {
     const { chatId } = useParams();
     const [messages, setMessages] = useState([]);
@@ -86,6 +85,7 @@ const ChatWindow = () => {
 
     const sendMessage = () => {
         if (ws && newMessage.trim()) {
+
             const message = {
                 chatId,
                 senderId: user.user_id,
@@ -94,6 +94,7 @@ const ChatWindow = () => {
             };
             ws.send(JSON.stringify(message));
             setNewMessage('');
+
         }
     };
 
@@ -111,7 +112,7 @@ const ChatWindow = () => {
                 }
             });
 
-            setFileId(response.data.message);
+            setFileId(response.data.fileGlobal);
             setStatusPicture('success');
         } catch (error) {
             setStatusPicture('error');

@@ -6,7 +6,7 @@ const uploadController = {
              return res.status(400).send({message: "Изображение не загружено"});
          }
          const fileId = req.file.filename;
-         res.send({ file: `http://192.168.1.10:8000/upload/${fileId}`, fileGlobal: `https://mycustomsubdomain.loca.lt/upload/${fileId}`});
+         res.send({ file: `http://localhost:8000/upload/${fileId}`, fileGlobal: `http://192.168.1.10:8000/upload/${fileId}`});
     },
     downloadProfilePicture: (req, res) => {
         const { filename } = req.params;

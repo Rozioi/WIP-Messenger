@@ -7,9 +7,9 @@ const AuthContext = createContext();
 export const AuthProvider = ({children}) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [user,setUser] = useState({});
-    const  wsUrl = "mycustomsubdomain.loca.lt";
+    const  wsUrl = "192.168.1.10";
     const api = axios.create({
-        baseURL: "https://mycustomsubdomain.loca.lt/"
+        baseURL: "http://192.168.1.10:8000/"
     });
     const checkAuth = () =>{
         const token = localStorage.getItem('token');

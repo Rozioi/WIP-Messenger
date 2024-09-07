@@ -12,8 +12,9 @@
 }
 
 .modal-content {
+    background-color: white;
     position: relative;
-    max-width: 90vw;
+    max-width: 95%;
     max-height: 90vh;
 }
 
@@ -57,7 +58,7 @@
     }
 
     .modal-content {
-        max-width: 95vw; /* Увеличенная максимальная ширина на мобильных устройствах */
+        max-width: 85vw; /* Увеличенная максимальная ширина на мобильных устройствах */
         max-height: 95vh; /* Увеличенная максимальная высота на мобильных устройствах */
     }
 

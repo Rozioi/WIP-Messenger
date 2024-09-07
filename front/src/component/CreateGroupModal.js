@@ -34,8 +34,8 @@ const CreateGroupModal = ({ isOpen, onClose }) => {
                     'Content-Type': 'multipart/form-data',
                 },
             });
-
-            setFileId(response.data.message);
+            console.log(response.data.fileGlobal);
+            setFileId(response.data.fileGlobal);
         } catch (error) {
             console.error('Upload error:', error.response ? error.response.data : error.message);
         }
@@ -47,6 +47,7 @@ const CreateGroupModal = ({ isOpen, onClose }) => {
                 ? prevState.filter(id => id !== friendId)
                 : [...prevState, friendId]
         );
+
     };
 
     const handleSubmit = async (e) => {

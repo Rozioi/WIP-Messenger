@@ -12,6 +12,7 @@
     background-color: #3D3C3C;
     border-right: 1px solid #ddd;
     overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }

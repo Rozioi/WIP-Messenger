@@ -30,7 +30,7 @@ const authController = {
                     user: user
                 });
             } else {
-                res.status(401).send('Неверные учетные данные');
+                res.status(401).send({message: 'Неверные учетные данные'});
             }
         } catch (e) {
             console.error('Error logging in:', e);

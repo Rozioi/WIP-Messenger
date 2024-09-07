@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useAuth } from './authContext';
 
-const WebSocketContext = createContext(null);
+const WebSocketContext = createContext();
 
 export const WebSocketProvider = ({ children }) => {
     const { wsUrl, user, isAuthenticated } = useAuth();
@@ -9,7 +9,7 @@ export const WebSocketProvider = ({ children }) => {
 
     useEffect(() => {
         if (isAuthenticated && wsUrl && user) {
-            const socket = new WebSocket(`wss://${wsUrl}?userId=${user.user_id}`);
+            const socket = new WebSocket(`ws://${wsUrl}:8000?userId=${user.user_id}`);
             setWs(socket);
 
             // Отправляем userId при открытии соединения

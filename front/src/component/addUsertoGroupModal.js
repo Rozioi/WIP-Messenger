@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../assets/styles/modalGroup.css';
 import { useAuth } from "../utils/authContext";
+import {useNavigate} from "react-router-dom";
 
 const AddUserToGroupModal = ({ isOpen, onClose, chatId }) => {
     const { api, user } = useAuth();
@@ -50,7 +51,7 @@ const AddUserToGroupModal = ({ isOpen, onClose, chatId }) => {
                 },
             });
 
-            setFileId(response.data.message);
+            setFileId(response.data.fileGlobal);
         } catch (error) {
             console.error('Upload error:', error.response ? error.response.data : error.message);
         }
@@ -91,6 +92,7 @@ const AddUserToGroupModal = ({ isOpen, onClose, chatId }) => {
             alert('An error occurred while trying to update the group.');
         }
     };
+    const navigate = useNavigate();
 
     return (
         <div className={`modal ${isOpen ? 'open' : ''}`}>
@@ -124,7 +126,7 @@ const AddUserToGroupModal = ({ isOpen, onClose, chatId }) => {
                                 {friends.map(friend => {
                                     const isMember = existingGroupMembers.some(member => member.user_id === friend.user_id);
                                     return (
-                                        <div key={friend.user_id} className="friend-item">
+                                        <div onClick={() => navigate(`/profile/${friend.username}`)} key={friend.user_id} className="friend-item">
                                             <input
                                                 type="checkbox"
                                                 id={`friend-${friend.user_id}`}
