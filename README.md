@@ -1,6 +1,3 @@
-
----
-
 # WIP-Messenger
 
 **WIP-Messenger** is a work-in-progress messaging project that includes both frontend and backend components. It supports real-time messaging, user authentication, and a responsive design. The project is being developed with a focus on seamless communication, convenience, and security.
